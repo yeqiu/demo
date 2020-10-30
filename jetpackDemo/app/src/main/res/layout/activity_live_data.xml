@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".livedata.LiveDataActivity">
+
+
+    <TextView
+        android:id="@+id/tvLiveDataTitle1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="计数器的数据与LiveDataViewModel绑定,数据发变化自动回调到TextView中"
+        app:layout_constraintBottom_toTopOf="@+id/tvLiveDataCount"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLiveDataCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btLiveDataCount"
+        app:layout_constraintTop_toBottomOf="@+id/tvLiveDataTitle1" />
+
+    <Button
+        android:id="@+id/btLiveDataCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:text="add"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/tvLiveDataCount"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/tvLiveDataCount"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvLiveDataCount" />
+
+
+    <TextView
+        android:id="@+id/tvLiveDataMap"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:text="map()的用法"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btLiveDataCount" />
+
+
+    <TextView
+        android:id="@+id/tvLiveDataUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLiveDataMap" />
+
+
+    <TextView
+        android:id="@+id/tvLiveDataSwitchMap"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:text="switchMap()的用法"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLiveDataUserName" />
+
+
+    <TextView
+        android:id="@+id/tvLiveDataUserName2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="UserName"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btChangeName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLiveDataSwitchMap" />
+
+
+    <Button
+        android:id="@+id/btChangeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:text="change"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/tvLiveDataUserName2"
+        app:layout_constraintLeft_toRightOf="@id/tvLiveDataUserName2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvLiveDataUserName2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

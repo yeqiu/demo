@@ -1,0 +1,3 @@
+include ':HailHydra'
+include ':app'
+rootProject.name = "AwesomeWeather"
