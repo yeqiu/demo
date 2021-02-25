@@ -1,7 +1,10 @@
 package com.yeqiu.jetpack
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import androidx.lifecycle.ProcessLifecycleOwner
+import com.yeqiu.jetpack.lifecycle.AppObserver
 
 /**
  * @project：jetpackDemo
@@ -10,16 +13,20 @@ import android.content.Context
  * @describe：
  * @fix：
  */
-class App :Application() {
+class App : Application() {
 
-    companion object{
-        lateinit var context:Context
+    lateinit var appObserver: AppObserver
+
+    companion object {
+        @SuppressLint("StaticFieldLeak")
+        lateinit var context: Context
     }
 
     override fun onCreate() {
         super.onCreate()
         context = applicationContext
+        appObserver = AppObserver()
+        ProcessLifecycleOwner.get().lifecycle.addObserver(appObserver)
     }
-
 
 }

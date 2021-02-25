@@ -19,7 +19,6 @@ object LogUtil {
     }
 
     fun  log (msg:Any){
-
         val json = Gson().toJson(msg)
         log(json)
     }

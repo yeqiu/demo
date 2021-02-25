@@ -24,9 +24,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-      
         init()
 
     }
@@ -38,8 +35,8 @@ class MainActivity : AppCompatActivity() {
 
         rvMain.layoutManager = layoutManager
 
-        data.add(ActivityData("ViewModel", ViewModelActivity::class.java))
         data.add(ActivityData("Lifecycle", LifecycleActivity::class.java))
+        data.add(ActivityData("ViewModel", ViewModelActivity::class.java))
         data.add(ActivityData("LiveData", LiveDataActivity::class.java))
         data.add(ActivityData("Room", RoomActivity::class.java))
         data.add(ActivityData("WorkManager", WorkManagerActivity::class.java))

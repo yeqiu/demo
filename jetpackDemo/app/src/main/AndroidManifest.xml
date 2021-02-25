@@ -23,6 +23,11 @@
         <activity android:name=".lifecycle.LifecycleActivity" />
         <activity android:name=".room.RoomActivity" />
         <activity android:name=".workmanager.WorkManagerActivity" />
+
+
+        <service android:name=".lifecycle.TestService"/>
+
+
     </application>
 
 </manifest>
