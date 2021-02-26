@@ -23,6 +23,9 @@
         <activity android:name=".lifecycle.LifecycleActivity" />
         <activity android:name=".room.RoomActivity" />
         <activity android:name=".workmanager.WorkManagerActivity" />
+        <activity android:name=".navigation.NavigationActivity" >
+            <nav-graph android:value="@navigation/app_navigation"/>
+        </activity>
 
 
         <service android:name=".lifecycle.TestService"/>

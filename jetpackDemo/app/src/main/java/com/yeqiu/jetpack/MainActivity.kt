@@ -4,12 +4,9 @@ import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.orhanobut.logger.AndroidLogAdapter
-import com.orhanobut.logger.FormatStrategy
-import com.orhanobut.logger.Logger
-import com.orhanobut.logger.PrettyFormatStrategy
 import com.yeqiu.jetpack.lifecycle.LifecycleActivity
 import com.yeqiu.jetpack.livedata.LiveDataActivity
+import com.yeqiu.jetpack.navigation.NavigationActivity
 import com.yeqiu.jetpack.room.RoomActivity
 import com.yeqiu.jetpack.viewmodel.ViewModelActivity
 import com.yeqiu.jetpack.workmanager.WorkManagerActivity
@@ -36,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         rvMain.layoutManager = layoutManager
 
         data.add(ActivityData("Lifecycle", LifecycleActivity::class.java))
+        data.add(ActivityData("Navigation", NavigationActivity::class.java))
         data.add(ActivityData("ViewModel", ViewModelActivity::class.java))
         data.add(ActivityData("LiveData", LiveDataActivity::class.java))
         data.add(ActivityData("Room", RoomActivity::class.java))

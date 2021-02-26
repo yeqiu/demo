@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/userFragment">
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.yeqiu.jetpack.navigation.UserFragment"
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_userFragment_to_orderFragment"
+            app:destination="@id/orderFragment"
+            app:enterAnim="@anim/slide_right_to_left_in"
+            app:exitAnim="@anim/slide_right_to_left_out"
+            app:popEnterAnim="@anim/slide_left_to_right_in"
+            app:popExitAnim="@anim/slide_left_to_right_out" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.yeqiu.jetpack.navigation.OrderFragment"
+        android:label="OrderFragment"
+        tools:layout="@layout/fragment_order" >
+
+        <deepLink app:uri="www.yeqiu.com"/>
+
+    </fragment>
+
+</navigation>
